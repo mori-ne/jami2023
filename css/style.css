@@ -36,9 +36,16 @@ a:hover {
   flex-direction: row;
   align-items: center;
 }
+#header .jami2023logo {
+  width: 100px;
+  margin: 0 auto;
+}
+#header h1 {
+  margin: 0 0 0 10px;
+}
 #header h1 a {
   display: block;
-  width: 780px;
+  width: 700px;
   height: 80px;
   margin: 0 28px 0 0;
 }
@@ -95,14 +102,20 @@ a:hover {
   color: #fff;
   text-indent: 20px;
 }
-#sidebar .global_nav ul li .active {
+#sidebar .global_nav ul li .enable {
   background: rgb(25, 58, 120);
   background: linear-gradient(0deg, rgb(25, 58, 120) 0%, rgb(0, 80, 170) 100%);
+  transition: all 0.3s;
+}
+#sidebar .global_nav ul li .enable:hover {
+  background: rgb(25, 58, 120);
+  background: linear-gradient(0deg, rgb(0, 80, 170) 0%, rgb(25, 58, 120) 100%);
+  opacity: 1;
+  text-indent: 2em;
+  transition: all 0.3s;
 }
 #sidebar .global_nav ul li .disable {
   background: #969696;
-}
-#sidebar .global_nav ul li .disable:hover {
   cursor: default;
   opacity: 1;
 }
@@ -147,9 +160,46 @@ a:hover {
 #contents {
   width: 690px;
 }
+#contents .contents_title {
+  display: flex;
+  align-items: center;
+  text-indent: 0.5em;
+  background: url(../img/h2.jpg);
+  width: 690px;
+  height: 50px;
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0 0 30px 0;
+}
+#contents .contents_area {
+  margin: 0 0 60px 0;
+}
+#contents .contents_area h3 {
+  font-size: 22px;
+  font-weight: bold;
+  border-left: 4px solid #0050aa;
+  border-bottom: 1px solid #000;
+  padding: 0 0 6px 0;
+  margin: 0 0 30px 0;
+  text-indent: 0.5em;
+}
+#contents .contents_area p {
+  font-size: 15px;
+  padding: 0 0 0 1em;
+  line-height: 1.66;
+}
+#contents .contents_area .contents_officer P:first-child {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0050aa;
+}
+#contents .contents_area .contents_officer P:last-child {
+  margin: 0 0 10px 0;
+}
 #contents .mv {
   position: relative;
-  height: 700px;
+  height: 720px;
   background: url("../img/mv.jpg");
   z-index: 1;
   margin: 0 0 160px 0;
@@ -171,7 +221,7 @@ a:hover {
   right: 20px;
   top: 220px;
   width: 340px;
-  height: 350px;
+  height: 380px;
   background: rgba(255, 255, 255, 0.8);
   padding: 20px;
 }
@@ -191,13 +241,13 @@ a:hover {
   }
 }
 
-#news section h2 {
+#news section .news_title {
   position: relative;
   font-size: 22px;
   padding: 0 0 5px 0;
   border-bottom: 2px solid #000;
 }
-#news section h2::before {
+#news section .news_title::before {
   content: "";
   position: absolute;
   left: 0;
