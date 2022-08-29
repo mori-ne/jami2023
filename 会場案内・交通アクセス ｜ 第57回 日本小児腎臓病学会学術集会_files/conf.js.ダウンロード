@@ -1,0 +1,61 @@
+//-----  ヘッダーメニューを固定
+$(function(){
+var _window = $(window),
+    _header_nav = $('.header_change'),
+    fixedBottom;
+ 
+_window.on('scroll',function(){
+    fixedBottom = $('.section_class').height();
+    if(_window.scrollTop() > fixedBottom){
+        _header_nav.addClass('show_fixed_menu');   
+    }
+    else{
+        _header_nav.removeClass('show_fixed_menu');   
+    }
+});
+ 
+_window.trigger('scroll');
+
+});
+
+//-----  トップに戻るボタン
+$(function(){
+  var pagetop = $('#page_top');
+  // ボタン非表示
+  pagetop.hide();
+  // 100px スクロールしたらボタン表示
+  $(window).scroll(function () {
+     if ($(this).scrollTop() > 100) {
+          pagetop.fadeIn();
+     } else {
+          pagetop.fadeOut();
+     }
+  });
+  pagetop.click(function () {
+     $('body, html').animate({ scrollTop: 0 }, 500);
+     return false;
+  });
+});
+
+//-----  スクロールアニメーション
+function scrollChk(){
+  var scroll = $(window).scrollTop();
+  var windowHeight = $(window).height();
+
+    jQuery('.scroll-animation').not('.active').each(function(){
+        var pos = $(this).offset().top;
+
+        if (scroll > pos - windowHeight){
+            $(this).addClass("active");
+		}
+	});
+	}
+	$(window).scroll(function (){
+    scrollChk();
+	});
+	$('body').on('touchmove', function() {
+    scrollChk();
+	});
+
+
+

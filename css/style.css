@@ -19,6 +19,10 @@ a:hover {
   transition: all 0.2s;
 }
 
+blockquote {
+  margin: 0 0 30px 0;
+}
+
 #wrapper {
   width: 1000px;
   margin: 0 auto;
@@ -317,4 +321,16 @@ a:hover {
   font-size: 16px;
   line-height: 2;
   text-align: justify;
+}
+
+.quote {
+  font-size: 0.8em !important;
+}
+
+.al-r {
+  text-align: right !important;
+}
+
+.al-l {
+  text-align: left !important;
 }/*# sourceMappingURL=style.css.map */
