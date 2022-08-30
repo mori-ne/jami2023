@@ -468,6 +468,14 @@ blockquote {
   text-decoration: underline;
 }
 
+.link_orange {
+  font-weight: bold;
+  color: orange;
+}
+.link_orange:hover {
+  text-decoration: underline;
+}
+
 .map_link {
   padding: 10px 0 0 15px;
   display: flex;

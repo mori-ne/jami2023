@@ -252,6 +252,7 @@ blockquote {
 			.bl_red {
 				border-left: 10px solid red !important;
 			}
+
 		}
 
 		.links_h3 {
@@ -583,6 +584,15 @@ section {}
 .link_blue {
 	font-weight: bold;
 	color: $primary_color;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.link_orange {
+	font-weight: bold;
+	color: orange;
 
 	&:hover {
 		text-decoration: underline;
