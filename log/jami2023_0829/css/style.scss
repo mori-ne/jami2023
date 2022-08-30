@@ -1,0 +1,433 @@
+@charset "UTF-8";
+
+// ベースカラー変数
+$primary_color: #0050aa;
+// レスポンシブ切り替えサイズの変数
+$sp: "767px";
+
+@mixin sp() {
+	@media (max-width:$sp) {
+		@content;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+//共通
+
+body {
+	background: #f1f6f9;
+	font-size: 16px;
+	font-family: 'メイリオ', 'Meiryo', sans-serif;
+	color: #333;
+}
+
+a {
+	text-decoration: none;
+	color: $primary_color;
+
+	&:hover {
+		opacity: 0.8;
+		transition: all 0.2s;
+	}
+}
+
+blockquote {
+	margin: 0 0 30px 0;
+}
+
+//レイアウト
+
+#wrapper {
+	width: 1000px;
+	margin: 0 auto;
+	background: #fff;
+}
+
+#header {
+	height: 170px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	.jami2023logo {
+		width: 100px;
+		margin: 0 auto;
+	}
+
+	h1 {
+		margin: 0 0 0 10px;
+
+		a {
+			display: block;
+			width: 700px;
+			height: 80px;
+			margin: 0 28px 0 0;
+
+		}
+	}
+
+}
+
+#container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 0 30px 0;
+}
+
+#sidebar {
+	width: 220px;
+
+	.global_nav {
+		margin: 0 0 10px 0;
+
+		background: #eee;
+		font-weight: bold;
+		color: #fff;
+
+		ul {
+			li {
+				a {
+					display: flex;
+					align-items: center;
+					height: 40px;
+					border-bottom: 1px solid #fff;
+					color: #fff;
+					text-indent: 20px;
+				}
+
+				.enable {
+					background: rgb(25, 58, 120);
+					background: linear-gradient(0deg, rgba(25, 58, 120, 1) 0%, rgba(0, 80, 170, 1) 100%);
+					transition: all 0.3s;
+
+					&:hover {
+						background: rgb(25, 58, 120);
+						background: linear-gradient(0deg, rgba(0, 80, 170, 1) 0%, rgba(25, 58, 120, 1) 100%);
+						opacity: 1;
+						text-indent: 2em;
+						transition: all 0.3s;
+					}
+				}
+
+				.disable {
+					background: #969696;
+					cursor: default;
+					opacity: 1;
+				}
+			}
+		}
+
+	}
+
+	.poster_area {
+		margin: 0 0 10px 0;
+
+		.poster_item {
+			background: #ffc646;
+			padding: 5px;
+			color: $primary_color;
+
+			a {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+
+				p {
+					display: flex;
+					align-items: center;
+					font-weight: bold;
+					height: 30px;
+					text-align: center;
+				}
+
+				.small {
+					font-size: 11px;
+				}
+
+			}
+		}
+
+	}
+
+	.banner_area {
+		margin: 0 0 10px 0;
+
+		.banner_item {
+			display: block;
+			width: 220px;
+			height: 80px;
+			margin: 0 0 10px 0;
+
+		}
+	}
+
+}
+
+#contents {
+	width: 690px;
+
+	.contents_title {
+		display: flex;
+		align-items: center;
+		text-indent: 0.5em;
+		background: url(../img/h2.jpg);
+		width: 690px;
+		height: 50px;
+		color: #fff;
+		font-size: 26px;
+		font-weight: bold;
+		margin: 0 0 60px 0;
+	}
+
+	.contents_area {
+		margin: 0 0 60px 0;
+
+		h3 {
+			font-size: 22px;
+			font-weight: bold;
+			border-left: 4px solid $primary_color;
+			border-bottom: 1px solid #000;
+			padding: 0 0 6px 0;
+			margin: 0 0 30px 0;
+			text-indent: 0.5em;
+
+		}
+
+		p {
+			font-size: 15px;
+			padding: 0 0 0 1em;
+			line-height: 1.66;
+		}
+
+		.contents_officer {
+
+			P {
+				&:first-child {
+					font-size: 18px;
+					font-weight: bold;
+					color: $primary_color;
+					// margin: 0 0 5px 0;
+				}
+
+				&:last-child {
+					margin: 0 0 10px 0;
+				}
+			}
+		}
+	}
+
+	.mv {
+		position: relative;
+		height: 720px;
+		background: url("../img/mv.jpg");
+		z-index: 1;
+		margin: 0 0 160px 0;
+
+		.subtitle {
+			position: absolute;
+			top: 30px;
+			left: 30px;
+			filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+		}
+
+		.date {
+			position: absolute;
+			right: 40px;
+			top: 150px;
+			filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+		}
+
+		.session_detail {
+			position: absolute;
+			right: 20px;
+			top: 220px;
+
+			width: 340px;
+			height: 380px;
+			background: rgba(255, 255, 255, 0.8);
+			padding: 20px;
+
+			dl {
+				display: none;
+			}
+		}
+
+		.subimage {
+			position: absolute;
+			z-index: 2;
+			bottom: -125px;
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
+	}
+
+}
+
+#news {
+	section {
+
+		.news_title {
+			position: relative;
+			font-size: 22px;
+			padding: 0 0 5px 0;
+			border-bottom: 2px solid #000;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: -2px;
+				width: 210px;
+				height: 4px;
+				background-color: #000;
+
+			}
+		}
+
+		.news_area {
+			height: 300px;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			margin: 15px 0 0 0;
+
+			.news_row {
+				display: flex;
+				flex-direction: row;
+				border-bottom: 1px solid #e3e3e3;
+				padding: 15px 10px 15px 0;
+
+				span {
+					font-size: 14px;
+					line-height: 1.66;
+					margin: 0 25px 0 0;
+				}
+
+				p {
+					font-size: 15px;
+					line-height: 1.66;
+
+					a {
+						color: $primary_color;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+#footer {
+	background: #efefef;
+	padding: 30px 0;
+
+	.address_area {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+		li {
+			address {
+				.address_title {
+					font-weight: bold;
+					color: $primary_color;
+					font-size: 17px;
+					line-height: 1.47;
+				}
+
+				.address_name {
+					font-weight: bold;
+					font-size: 15px;
+					line-height: 1.66;
+				}
+
+				span {
+					font-size: 15px;
+					line-height: 1.66;
+				}
+			}
+
+			&:first-child {
+				margin: 0 60px 0 0;
+			}
+		}
+
+	}
+}
+
+#pagetop {
+	span {
+		position: fixed;
+		bottom: 30px;
+		right: 30px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		color: #fff;
+		background: $primary_color;
+		font-size: 16px;
+		font-weight: bold;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+}
+
+.copywrite {
+	font-size: 13px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.inner {
+	padding: 0 30px;
+
+}
+
+// ご挨拶
+.greeting_profile {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	margin: 0 0 60px 0;
+
+	.greeting_details {
+		width: 450px;
+		text-align: right;
+		margin: 0 30px 15px 0;
+
+		p {
+			margin: 0 0 10px 0;
+		}
+	}
+}
+
+.greeting_content {
+	padding: 0 60px;
+	font-size: 16px;
+	line-height: 2;
+	text-align: justify;
+}
+
+.quote {
+	font-size: 0.8em !important;
+}
+
+.al-r {
+	text-align: right !important;
+}
+
+.al-l {
+	text-align: left !important;
+}

@@ -1,0 +1,2130 @@
+@charset "utf-8";
+
+/*  --------------- 全体共通 ---------------  */
+
+*{
+	padding:0;
+	margin:0;
+	border:solid black 0;
+	font-size:1rem;
+	font-family: 'メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	}
+
+a,strong,u{ font-size:unset; }
+a:link,active{color:; text-decoration:none;}
+a:hover{color:; text-decoration:none;}
+a:visited{color:; text-decoration:none;}
+
+a:link img,active img{border:0;}
+a:hover img{border:0;}
+a:visited img{border:0;}
+
+ul{list-style:none;}
+
+	/* テキストカラー */
+.color_red{color:red;}
+
+	/* テキストインデント */
+.nigyoume_indent{
+	text-indent:-1em;
+	padding-left:1em;
+	}
+
+.list_style_disc{
+	list-style:disc;
+	padding-left:1.5em;
+	}
+
+.list_style_number{
+	list-style:number;
+	padding-left:1.5em;
+	}
+
+.list_style_number li{
+	display:list-item
+	}
+
+
+/*　 --------------- レイアウト --------------- 　*/
+body{
+	-webkit-text-size-adjust: 100%;
+	}
+
+
+#container{
+	min-width:850px;
+	background-color:#ebebe6;
+	}
+
+header{
+	position:relative;
+	z-index:1;
+	width:100%;
+	height:160px;
+	background-color:#39afb6;
+	background-image:url(img/misagara.gif);
+	background-repeat:repeat-x;
+	background-position:top center;
+	}
+
+.wrapper{
+	position:relative;
+	z-index:0;
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+	width:855px;
+	margin:0 auto;
+	background-color:#fff;
+	box-shadow:0px 0px 10px 10px rgba(0,0,0,.2);
+	}
+
+main{
+	width:645px;
+	padding:15px;
+	background-color:#fff;
+	box-sizing: border-box;
+	}
+
+sidebar{
+	width:210px;
+	padding:15px 0;
+	background-color:#f3f4ec;
+	}
+
+footer{
+	position:relative;
+	z-index:1;
+	height:94px;
+	padding:17px 0;
+	background-color:#39afb6;
+	background-image:url(img/misagara.gif);
+	background-repeat:repeat-x;
+	background-position:bottom center;
+	box-sizing: border-box;
+	}
+
+/*  --------------- タイトルタグ共通 ---------------  */
+
+h1{
+	color:#fff;
+	font-size:2em;
+	text-align:center;
+	}
+
+h2{
+	font-size:1.3em;
+	text-align:center;
+	padding:20px 0;
+	}
+
+h3{
+	font-size:1.2em;
+	text-align:center;
+	padding:20px 0;
+	}
+
+h4,h5,h6{
+	font-size:1em;
+	padding:20px 0;
+	}
+
+/*  --------------- header ---------------  */
+
+.logo_box{
+	text-align:center;
+	width:855px;
+	margin:0 auto;
+	}
+
+.logo_box h1 img{
+	height:148px;
+	padding-top:8px;
+	}
+
+/*  --------------- main ---------------  */
+
+
+
+	/*-- ページ共通 --*/
+
+.pankuzu{
+	padding:0 20px;
+	}
+
+.contents{
+	padding:20px;
+	}
+
+.contents h2{
+	color:#fff;
+	letter-spacing:0.1em;
+	text-align:center;
+	margin-bottom:2em;
+	background-color:#225292;
+	background-image:url(img/umi_back2.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100%;
+	}
+
+.contents p ~ h2{
+	margin-top:3em;
+	}
+
+.contents h3{
+	text-align:left;
+	padding:8px 0 8px 30px;
+	margin:2em auto 1.5em;
+	border-bottom:2px solid #225292;
+	background-image:url(img/mark_img_ao.svg);
+	background-repeat:no-repeat;
+	background-position:left center;
+	background-size:16px;
+	}
+
+.contents p{
+	text-align:justify;
+	line-height:2;
+	}
+
+.contents img{
+	max-width:100%;
+	}
+
+.contents .txt_center{ text-align:center; }
+.contents .txt_right{ text-align:right; }
+.contents .txt_left{ text-align:left; }
+
+.contents .kuro{ color:#000;}
+.contents .aka{ color:red;}
+.contents .ao{ color:#0071bc;}
+.contents .ore{ color:#f7931e;}
+.contents .mido{ color:#39b54a;}
+
+.contents .aka_bold_center{
+	font-weight:bold; 
+	color:red; 
+	text-align:center;
+	}
+
+.contents .underline{
+	text-decoration:underline;
+	}
+
+span.kome{
+	display:inline;
+	width:auto !important;
+	}
+
+sup{
+	font-size:0.5em;
+	margin-right:0.5em;
+	}
+
+
+
+
+dt{
+	font-size:1.1em;
+	font-weight:bold;
+	margin-top:2em;
+	margin-bottom:1em;
+	padding-top:0.3em;
+	padding-bottom:0.3em;
+	padding-left:0.5em;
+	border-left:12px solid #225292;
+	}
+dd{
+	line-height:1.6;
+	margin-bottom:1em;
+	}
+
+
+/*赤文字打消し線*/
+.red_strike{
+text-decoration:line-through;
+color:red;
+}
+
+
+/*共通ボタンリンク*/
+.contents .button_link{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	color:#fff;
+	/font-size:0.9em;
+	font-weight:bold;
+	text-decoration:none !important;
+	box-sizing:border-box;
+	width:230px;
+	min-width:200px;
+	min-height:60px;
+	padding:10px;
+	margin:1em auto;
+	border-radius:5px;
+	background:linear-gradient(-10deg, #d50854, #ff8405);
+	}
+
+.contents a.button_link{
+	transition:0.5s;
+	}
+.contents a.button_link:hover{
+	opacity:0.7;
+	}
+
+.contents a.button_link span.pdf_icon{
+	display:inline-block;
+	color:#fff;
+	padding:0px 0px 0px 30px;
+	background-image:url(img/icon_pdf.png);
+	background-repeat:no-repeat;
+	background-position:left center;
+	background-size:15px;
+	}
+
+
+	/*-- index.html --*/
+
+		/*　ビデオ　mov_box*/
+#video_sc{
+	padding:15px 0;
+	}
+
+.mov_box{
+	height:380px;
+	}
+.mov_box video{
+	width:100%;
+	}
+
+		/*　2022年3月メッセージ　message_box*/
+#message_sc h2{
+	padding:3px 0 3px;
+	}
+
+#message_sc .aka{ color:red; }
+#message_sc .u_line{ text-decoration:underline; }
+/*#message_sc .size_1_2{ font-size:1.2em; }*/
+#message_sc a{
+	text-decoration:underline;
+	}
+
+#message_sc a:hover{
+	opacity:0.7;
+	}
+
+#message_sc .greeting_box,
+#message_sc .info_date_box,
+#message_sc .info_program_box{
+	padding:1em;
+	margin-bottom:1em;
+	}
+
+#message_sc .greeting_box{ background:#fff; margin-bottom:0;}
+#message_sc .info_date_box{ background:#d3f5fb;}
+#message_sc .info_program_box{ background:#fffbc4;}
+
+#message_sc .greeting_box p{ font-size:0.9em;}
+#message_sc .greeting_box p span,
+#message_sc .greeting_box p.txt_right span.size_1_2{ font-size:unset;}
+	
+#message_sc .txt_right{ text-align:right; }
+#message_sc .txt_center{ text-align:center; }
+
+#message_sc .text_message{
+	text-align:justify;
+	margin:0.5em 0;
+	}
+
+#message_sc .info_date_box p:first-child{
+	margin-bottom:0.5em;
+	}
+#message_sc .info_date_box p.date_p{
+	padding-left:1.5em;
+	}
+
+#message_sc .info_date_box .kome_box{
+	padding-left:1em;
+	margin-top:0.7em;
+	}
+#message_sc .info_date_box .kome_box p{
+	text-indent:-1.7em;
+	padding-left:2em;
+	margin-bottom:0;
+	}
+
+#message_sc .info_date_box p.date_p span{	
+	display:inline-block;
+	text-align:left;
+	width:12.5em;
+	}
+
+#message_sc .info_program_box ul{
+	margin:1em 0 0;
+	}
+
+
+		/*　2022年5月メッセージ　message_box*/
+#message_sc .info_program_box.back_green{ background:#eeffc4;}
+#message_sc .info_program_box.back_green p.txt_center{
+	font-size:unset;
+	text-align:center;
+	margin-bottom:0.5em;
+	}
+#message_sc .info_program_box.back_green p{
+	font-size:0.95em;
+	text-align:justify;
+	margin-left:0.3em;
+	margin-right:0.3em;
+	}
+#message_sc .info_program_box.back_green p.margin_top_1em{
+	margin-top:1em;
+	}
+
+		/*　2022年6月メッセージ　message_box*/
+#message_sc_after .tanitsuite_box{ 
+	padding:0.8em 1em 0.8em 1em;
+	margin-bottom:1em !important;
+	border:5px solid #f0c1b3;
+	background:#f3e1dc;
+	
+	}
+#message_sc_after .tanitsuite_box p strong{
+	display:block;
+	font-size:1.2em;
+	text-align:center;
+	margin-bottom:0.5em;
+	}
+#message_sc_after .tanitsuite_box p{
+	font-size:0.93em;
+	text-align:justify;
+	margin-left:0.25em;
+	margin-right:0.25em;
+	margin-bottom:0;
+	}
+#message_sc_after .tanitsuite_box .nigyoume_intent{
+	text-indent:-1em;
+	padding-left:1em;
+	margin-top:0.25em;
+	}
+
+#message_sc_after .tanitsuite_box .nigyoume_intent + p{
+	margin-top:0.25em;
+	}
+
+
+
+		/*　大会終了後メッセージ 7月1日更新 */
+#message_sc_after .greeting_box{
+	padding:1em;
+	margin-bottom:1em;
+	}
+#message_sc_after .greeting_box{ background:#fff; margin-bottom:0;}
+#message_sc_after .greeting_box p{ font-size:0.98em; line-height:1.6;}
+#message_sc_after .greeting_box p span,
+#message_sc_after .greeting_box p.txt_right span.size_1_2{ font-size:unset;}
+#message_sc_after .txt_right{ text-align:right; }
+#message_sc_after .txt_center{ text-align:center; }
+#message_sc_after .text_message{
+	text-align:justify;
+	margin:0.5em 0 1em;
+	}
+.m_box_border{
+	box-sizing:border-box;
+	border:5px solid yellow;
+	padding:0.8em 1em 0.8em 1em !important;
+	margin-bottom:1em !important;
+	background-color:#ffffed !important;
+	}
+
+
+
+
+		/*Information*/
+#info_sc{
+	padding:10px 0;
+	}
+
+#info_sc h2{
+	font-size:2em;
+	text-align:left;
+	padding:0px 15px;
+	background-color:#39afb6;
+	box-sizing: border-box;
+	}
+
+#info_sc h2 img{
+	width:140px;
+	}
+
+.info_box{
+	padding:0px 15px;
+	}
+
+.info_box table tr td{
+	font-size:0.9em;
+	vertical-align:top;
+	padding:10px 0;
+	border-bottom:1px solid #ccc;
+	}
+
+.info_box table tr td a{
+	text-decoration:underline;
+	}
+
+.info_box table tr td:nth-child(1){
+	width:9em;
+	}
+
+.info_box table tr td:nth-child(2){
+	width:32em;
+	}
+
+
+
+	/*-- ご挨拶 --*/
+.organizer{
+	display:flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: flex-end;
+	padding-bottom:40px;
+	}
+.contents .organizer p{
+	text-align:right;
+	line-height:1.6;
+	padding-right:1em;
+	}
+.kaityou_namae{
+	font-size:1.4em;
+	}
+.contents p.katagaki{
+	font-size:0.95em;
+	line-height:1.3;
+	}
+.organizer img{
+	width:120px;
+	}
+
+.contents .greeting_text p{
+	line-height:1.7;
+	}
+
+
+
+	/*-- 開催概要 --*/
+.outline_page .nigyoume_indent{
+	line-height:1.4;
+	}
+
+.outline_page p.kaisai_date {
+	letter-spacing:0;
+	line-height:unset;
+	box-sizing:border-box;
+	padding:1em 0.3em 1em 1.2em;
+	margin-bottom:0.5em;
+	background-color:#dfedff;
+	}
+.outline_page p.kaisai_date span{	
+	display:inline-block;
+	font-size:0.95em;
+	text-align:left;
+	width:12.5em;
+	}
+
+.outline_page p.blue_box{
+	font-size:0.95em;
+	text-align:center;
+	box-sizing:border-box;
+	padding:1em;
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+	background-color:#dfedff;
+	}
+
+.outline_page .chushaku_box{
+	margin-top:1em;
+	}
+
+.outline_page .chushaku{
+	text-align:left;
+	margin-top:1em;
+	margin-bottom:1em;
+	}
+
+.outline_page table.hanyou_table th,
+.outline_page table.hanyou_table td{
+	font-size:0.9em;
+	text-align:center;
+	width:auto;
+	}
+
+.info_date_box .nigyoume_indent{
+	text-indent:-1.7em;
+	padding-left:2em;
+	}
+
+
+
+	/*-- 演題募集・森田賞について --*/
+.subject_contents{
+	padding-bottom:2em;
+	}
+
+.subject_contents h3{
+	margin-bottom:0.5em;
+	}
+
+.subject_contents h4{
+	color:#225292;
+	border-bottom:1px dotted #225292;
+	padding-bottom:0.5em;
+	margin-top:1em;
+	margin-bottom:0.5em;
+	}
+
+.subject_contents p a{
+	color:blue;
+	text-decoration:underline;
+	}
+
+.subject_contents p a:hover{
+	color:red;
+	}
+
+.subject_contents .event_date{
+	text-align:center;
+	font-weight:bold;
+	padding:0.5em 0;
+	margin:0.5em 0;
+	background:#22529233;
+	}
+
+.subject_contents li{
+	margin-bottom:0.5em;
+	}
+
+.subject_contents .button_flex{
+	display:flex;
+	flex-direction: row;
+	 flex-wrap: nowrap;
+	justify-content: center;
+	}
+
+.subject_contents .button_flex a{
+	display:inline-block;
+	padding:1em 1em 0.8em;
+	margin:2em 0.5em 2em;
+	border-radius:7px;
+	background:linear-gradient(-10deg, #d50854, #ff8405);
+	color:#fff;
+	text-align:center;
+	font-weight:bold;
+	opacity:1;
+	transition:0.5s;
+	}
+
+.subject_contents .button_flex a:link,
+.subject_contents .button_flex a:active,
+.subject_contents .button_flex a:visited{
+	color:#fff;
+	}
+
+.subject_contents .button_flex a:hover{
+	opacity:0.7;
+	transition:0.3s;
+	}
+
+.subject_contents .button_flex span.mukou{
+	display:inline-block;
+	padding:1em 1em 0.8em;
+	margin:2em 0.5em 2em;
+	border-radius:7px;
+	background:#f37031;
+	color:#fff;
+	text-align:center;
+	font-weight:bold;
+	opacity:1;
+	transition:0.5s;
+	}
+
+
+	/*-- 指定演題登録 --*/
+.subject_sitei_contents{
+	padding-bottom:2em;
+	}
+
+.subject_sitei_contents h3{
+	margin-bottom:0.5em;
+	}
+
+.subject_sitei_contents h4{
+	color:#225292;
+	border-bottom:1px dotted #225292;
+	padding-bottom:0.5em;
+	margin-top:1em;
+	margin-bottom:0.5em;
+	}
+
+.subject_sitei_contents h5{
+	border-left:8px solid #000;
+	padding:0.1em 1em 0.05em;
+	margin:2em 0 1em;
+	}
+
+.subject_sitei_contents p a{
+	color:blue;
+	text-decoration:underline;
+	}
+
+.subject_sitei_contents p a:hover{
+	color:red;
+	}
+
+.subject_sitei_contents .event_date{
+	text-align:center;
+	font-weight:bold;
+	padding:0.5em 0;
+	margin:0.5em 0;
+	background:#22529233;
+	}
+
+.subject_sitei_contents li{
+	margin-bottom:0.5em;
+	}
+
+
+.subject_sitei_contents table.moji_hyou{
+	margin:1em 0;
+	border-collapse:collapse;
+	}
+
+.subject_sitei_contents table.moji_hyou th{
+	font-size:0.8em;
+	text-align:center;
+	line-height:1.2;
+	width:140px;
+	padding:10px 0;
+	background:#22529233;
+	border:1px solid #225292;
+	}
+
+.subject_sitei_contents table.moji_hyou td{
+	font-size:0.8em;
+	text-align:center;
+	padding:10px 0;
+	border:1px solid #225292;
+	}
+
+.subject_sitei_contents .tag_code{
+	padding:1em;
+	background:#22529233;
+	}
+
+.subject_sitei_contents .button_flex{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	margin-bottom:2em;
+	}
+
+.subject_sitei_contents .button_flex a{
+	display:inline-block;
+	width:45%;
+	padding:1em 0 0.8em;
+	margin:2em 0.5em 2em;
+	border-radius:7px;
+	background:linear-gradient(-10deg, #d50854, #ff8405);
+	color:#fff;
+	text-align:center;
+	font-weight:bold;
+	opacity:1;
+	transition:0.5s;
+	}
+
+.subject_sitei_contents .button_flex a:link,
+.subject_sitei_contents .button_flex a:active,
+.subject_sitei_contents .button_flex a:visited{
+	color:#fff;
+	}
+
+.subject_sitei_contents .button_flex a:hover{
+	opacity:0.7;
+	transition:0.3s;
+	}
+
+.subject_sitei_contents .button_flex span.mukou{
+	display:inline-block;
+	width:45%;
+	padding:1em 0 0.8em;
+	margin:2em 0.5em 2em;
+	border-radius:7px;
+	background:#f37031;
+	color:#fff;
+	text-align:center;
+	font-weight:bold;
+	opacity:1;
+	transition:0.5s;
+	}
+
+
+	/*-- 森田賞(学会論文賞)について --*/
+.subject_morita_contents{
+	padding-bottom:2em;
+	}
+
+.subject_morita_contents h3{
+	margin-bottom:0.5em;
+	}
+
+.subject_morita_contents h4{
+	color:#225292;
+	border-bottom:1px dotted #225292;
+	padding-bottom:0.5em;
+	margin-top:1em;
+	margin-bottom:0.5em;
+	}
+
+.subject_morita_contents h5{
+	border-left:8px solid #000;
+	padding:0.1em 1em 0.05em;
+	margin:2em 0 1em;
+	}
+
+.subject_morita_contents ul.list_style_disc{
+	margin-top:0.5em;
+	}
+
+.subject_morita_contents p a{
+	color:blue;
+	text-decoration:underline;
+	}
+
+.subject_morita_contents p a:hover{
+	color:red;
+	}
+
+.subject_morita_contents .event_date{
+	text-align:center;
+	font-weight:bold;
+	padding:0.5em 0;
+	margin:0.5em 0;
+	background:#22529233;
+	}
+
+.subject_morita_contents li{
+	margin-bottom:0.5em;
+	}
+
+.subject_morita_contents .button_flex{
+	display:flex;
+	flex-direction: row;
+	 flex-wrap: nowrap;
+	justify-content: center;
+	}
+
+.subject_morita_contents .button_flex a{
+	display:inline-block;
+	padding:1em 1em 0.8em;
+	margin:2em 0.5em 2em;
+	border-radius:7px;
+	background:linear-gradient(-10deg, #d50854, #ff8405);
+	color:#fff;
+	text-align:center;
+	font-weight:bold;
+	opacity:1;
+	transition:0.5s;
+	}
+
+.subject_morita_contents .button_flex a:link,
+.subject_morita_contents .button_flex a:active,
+.subject_morita_contents .button_flex a:visited{
+	color:#fff;
+	}
+
+.subject_morita_contents .button_flex a:hover{
+	opacity:0.7;
+	transition:0.3s;
+	}
+
+.subject_morita_contents .button_flex span.mukou{
+	display:inline-block;
+	padding:1em 1em 0.8em;
+	margin:2em 0.5em 2em;
+	border-radius:7px;
+	background:#f37031;
+	color:#fff;
+	text-align:center;
+	font-weight:bold;
+	opacity:1;
+	transition:0.5s;
+	}
+
+
+	/*-- 一般演題 --*/
+.subject_ippan_contents{
+	padding-bottom:2em;
+	}
+
+.subject_ippan_contents h3{
+	margin-bottom:0.5em;
+	}
+
+.subject_ippan_contents h4{
+	color:#225292;
+	border-bottom:1px dotted #225292;
+	padding-bottom:0.5em;
+	margin-top:1em;
+	margin-bottom:0.5em;
+	}
+
+.subject_ippan_contents h5{
+	border-left:8px solid #000;
+	padding:0.1em 1em 0.05em;
+	margin:2em 0 1em;
+	}
+
+.subject_ippan_contents p a{
+	color:blue;
+	text-decoration:underline;
+	}
+
+.subject_ippan_contents p a:hover{
+	color:red;
+	}
+
+.subject_ippan_contents .event_date{
+	text-align:center;
+	font-weight:bold;
+	padding:0.5em 0;
+	margin:0.5em 0;
+	background:#22529233;
+	}
+
+.subject_ippan_contents li{
+	margin-bottom:0.5em;
+	}
+
+
+.subject_ippan_contents table.moji_hyou{
+	margin:1em 0;
+	border-collapse:collapse;
+	}
+
+.subject_ippan_contents table.moji_hyou th{
+	font-size:0.75em;
+	text-align:center;
+	line-height:1.3;
+	width:121px;
+	padding:10px 0;
+	background:#22529233;
+	border:1px solid #225292;
+	}
+
+.subject_ippan_contents table.moji_hyou th:nth-child(5){
+	width:90px;
+	}
+
+.subject_ippan_contents table.moji_hyou td{
+	font-size:0.8em;
+	text-align:center;
+	padding:10px 0;
+	border:1px solid #225292;
+	}
+
+.subject_ippan_contents .tag_code{
+	padding:1em;
+	background:#22529233;
+	}
+
+.subject_ippan_contents .button_flex{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	margin-bottom:2em;
+	}
+
+.subject_ippan_contents .button_flex a{
+	display:inline-block;
+	width:45%;
+	padding:1em 0 0.8em;
+	margin:2em 0.5em 2em;
+	border-radius:7px;
+	background:linear-gradient(-10deg, #d50854, #ff8405);
+	color:#fff;
+	text-align:center;
+	font-weight:bold;
+	opacity:1;
+	transition:0.5s;
+	}
+
+.subject_ippan_contents .button_flex a:link,
+.subject_ippan_contents .button_flex a:active,
+.subject_ippan_contents .button_flex a:visited{
+	color:#fff;
+	}
+
+.subject_ippan_contents .button_flex a:hover{
+	opacity:0.7;
+	transition:0.3s;
+	}
+
+.subject_ippan_contents .button_flex span.mukou{
+	display:inline-block;
+	width:45%;
+	padding:1em 0 0.8em;
+	margin:2em 0.5em 2em;
+	border-radius:7px;
+	background:#f37031;
+	color:#fff;
+	text-align:center;
+	font-weight:bold;
+	opacity:1;
+	transition:0.5s;
+	}
+
+
+	/*-- 交通・アクセス --*/
+.contents p.inyoumoto{
+	font-size:0.9em;
+	line-height:1.4;
+	text-align:right;
+	margin-top:-25px;
+	margin-bottom:20px;
+	}
+
+.sec_access iframe{
+	margin-bottom:2em;
+	}
+
+.gm-style .review-box{display:none}
+
+blockquote{
+	padding-bottom:4em;
+	}
+
+.sec_access .contents p{
+	line-height:1.8;
+	}
+
+.sec_access ul li{
+	padding-bottom:0.5em;
+	}
+
+.toiawase_title{
+	position:relative;
+	top:2.05em;
+	left:2em;
+	}
+.toiawase_title strong{
+	color:#39b54a;
+	font-size:1.2em;
+	background-color:#fff;
+	padding:0 10px;
+	}
+.yoyaku_contact_box{
+	display:inlin-block;
+	padding:20px 25px 15px;
+	margin:1em 0;
+	border:3px solid #39b54a;
+	border-radius:10px;
+	}
+
+.contents .yoyaku_contact_box p{
+	line-height:1.6;
+	}
+
+.tyui{ margin-top:2em; }
+.tyui p{
+	display: inline-block;
+	color:red;
+	text-indent:-3.2em;
+	padding-left:3.2em;
+	line-height:1.4;
+	}
+
+.contents .riyou_annai{
+	padding:0.5em 0;
+	margin:2em auto 1em;
+	border-top:2px solid #225292;
+	border-bottom:2px solid #225292;
+	}
+.contents .riyou_annai p{
+	font-size:1.2em;
+	text-align:center;
+	}
+
+.rosenzu_setsumei dt{
+	background-color:#f3f4ec;
+	padding-bottom:8px;
+	}
+	/*各出発点border-leftのカラー*/
+.naha_terminal_kara{border-color:red;}
+.airport_kara{border-color:#0071bc;}
+.nago_terminal_kara{border-color:#39b54a}
+
+.rosenzu_setsumei dd{
+	padding-left:1.5em;
+	}
+
+.rosenzu_setsumei dd img{
+	position:relative;
+	top:0.2em;
+	display: inline-block;
+	padding-right:0.5em;
+	}
+
+.rosenzu_setsumei dd p{
+	display: inline-block;
+	text-indent:-2em;
+	padding-left:2em;
+	}
+
+.rosenzu_setsumei .aka strong{
+	display: inline-block;
+	text-indent:-1em;
+	padding-left:1em;
+	line-height:1.6;
+	}
+
+.rentacar_title{
+	position:relative;
+	top:2.05em;
+	left:2em;
+	}
+.rentacar_title strong{
+	color:red;
+	font-size:1.2em;
+	background-color:#fff;
+	padding:0 10px;
+	}
+.rentacar_tyui_box{
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding:20px 25px 15px;
+	margin:1em 0 1em;
+	border:3px dotted red;
+	border-radius:10px;
+	}
+.rentacar_text_box{
+	width:80%;
+	}
+.rentacar_text_box p{
+	line-height:1.8;
+	}
+
+.rentacar_text_box a p{
+	margin-top:1em;
+	}
+
+.map_link img{
+	position:relative;
+	top:10px;
+	width:25px;
+	padding-right:0.2em;
+	}
+
+.kouku_photo_box{
+	text-align:center;
+	padding:2em 0;
+	}
+
+
+
+	/*-- プログラム・日程表 program.html --*/
+	
+.sec_program .button_flex{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom:30px;
+	}
+
+.sec_program .button_flex li{
+	text-align:center;
+	box-sizing:border-box;
+	width:50%;
+	/padding:0 20px 20px;
+	}
+
+.sec_program .button_flex li a{
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	}
+.sec_program .pdf_button{
+	padding-right:10px;
+	padding-left:10px;
+	}
+.sec_program .pdf_button li a{
+	color:#333;
+	font-weight:bold;
+	box-sizing:border-box;
+	width:250px;
+	height:50px;
+	margin:10px auto;
+	border-radius:5px;
+	border:1px solid #9d9d9d;
+	background:linear-gradient(45deg,#eee,#eee);
+	transition:0.3s;
+	}
+.sec_program .pdf_button li a:hover{
+	color:#777;
+	border:1px solid #bbb;
+	background:linear-gradient(-45deg,#ccc,#ccc);
+	}
+.sec_program .pdf_button li a span{
+	display:inline-block;
+	padding:13px 15px 10px 25px;
+	background-image:url(img/icon_pdf.png);
+	background-repeat:no-repeat;
+	background-position:left center;
+	background-size:15px;
+	}
+
+table.hyblid_table{
+	width:100%;
+	border-collapse:collapse;
+	}
+table.hyblid_table th,
+table.hyblid_table td{
+	color:#333;
+	line-height:1.3;
+	text-align:center;
+	vertical-align:middle;
+	word-break:break-word;
+	box-sizing:border-box;
+	padding:5px 5px;
+	border:1px solid #225292;
+	}
+table.hyblid_table th:first-child{
+	width:55%;
+	text-align:left;
+	padding-left:10px;
+	}
+table.hyblid_table th{
+	font-size:9pt;
+	background:#dfedff;
+	padding-top:7px;
+	padding-bottom:4px;
+	}
+
+table.hyblid_table td{
+	font-size:12pt;
+	width:15%;
+	background:#fff;
+	}
+table.hyblid_table th a,
+table.hyblid_table td a{
+	color:#225292;
+	text-decoration:underline;
+	transition:0.2s;
+	}
+table.hyblid_table th a:hover,
+table.hyblid_table td a:hover{
+	color:#5989c9;
+	text-decoration:none;
+	}
+
+table.hyblid_table ~ .txt_right{
+	font-size:10pt;
+	text-align:right;
+	}
+
+table.hyblid_table .kome{
+	color:#225292;
+	font-size:unset;
+	}
+
+
+dl.endai_list dt{
+	margin-top:3em;
+	background:#eee;
+	}
+
+dl.endai_list dd{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	}
+
+dl.endai_list dd p{
+	font-size:0.86em;
+	text-align:left;
+	line-height:1.6;
+	margin-bottom:0.2em;
+	word-break: keep-all;
+	}
+
+.contents dl.endai_list dd p.kigyo{
+	text-align:right;
+	box-sizing:border-box;
+	width:100%;
+	margin-top:1em;
+	padding-right:1em;
+	}
+
+@media screen and (max-width:480px) {
+dl.endai_list dd p{
+	word-break: break-word;
+	}
+} 
+
+_::-webkit-full-page-media, _:future, :root dl.endai_list dd p{
+	/overflow-wrap: break-word;
+}
+
+dl.endai_list dd p.thame{
+	width:100% !important;
+	font-size:1em;
+	font-weight:bold;
+	text-indent:-4em;
+	padding-left:5em !important;
+	}
+dl.endai_list dd p.endai_title{
+	display:block;
+	color:#225292;
+	font-size:1em;
+	font-weight:bold;
+	text-indent:0em !important;
+	line-height:1.4;
+	width:100% !important;
+	box-sizing:border-box;
+	margin:25px 10px 5px;
+	padding:3px 0 ;
+	padding-left:0.2em !important;
+	border-bottom:1px solid #225292;
+	}
+
+dl.endai_list dd p.zachou,
+dl.endai_list dd p.enja{
+	text-indent:0em !important;
+	box-sizing:border-box;
+	width:11% !important;
+	padding-left:1em !important;
+	}
+
+dl.endai_list dd p.zachou ~ p,
+dl.endai_list dd p.enja ~ p{
+	text-indent:-6.05em;
+	/word-break:unset;
+	box-sizing:border-box;
+	width:85%;
+	padding-left:6.2em;
+	}
+
+dl.endai_list dd p.ex_no{
+	text-indent:0em !important;
+	box-sizing:border-box;
+	width:13% !important;
+	padding-left:1em !important;
+	}
+dl.endai_list dd p.ex_no + p.ex_en{
+	text-indent:-6.05em;
+	/word-break:unset;
+	box-sizing:border-box;
+	width:82%;
+	padding-left:6.2em;
+	}
+
+dl.endai_list dd p.ex_en{
+	padding-left:10px;
+	}
+
+a.down_pdf{
+	text-decoration:underline;
+	margin:1em 0 0 1em;
+	padding-left:30px;
+	background-image:url(pdf/icon_pdf.png);
+	background-repeat:no-repeat;
+	background-position:left center;
+	background-size:20px;
+	}
+a.down_pdf:hover{
+	text-decoration:unset;
+	opacity:0.7;
+	}
+
+
+
+
+		/* 招聘講演（ESPN/JSPN共同企画） */
+dl.endai_list dd p.zachou ~ p.prof_rezan{
+	text-indent:-5.6em; 
+	padding-left:5.8em;
+	}
+
+
+
+	/*-- 学会参加者へのご案内 participant.html --*/
+.participant_page .contents{
+	padding-bottom:100px;
+	}
+
+.participant_page .contents h2 + h3{
+	margin-top:0;
+	}
+.participant_page .contents h3{
+	margin-top:3em;
+	}
+
+.participant_page .contents h2:first-child{
+	margin-top:0em;
+	}
+.participant_page .contents h2{
+	margin-top:5em;
+	}
+
+
+.participant_page .contents h4{
+	margin-top:1.5em;
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	}
+
+.participant_page .contents p{
+	line-height:1.6;
+	}
+
+.participant_page .contents a{
+	text-decoration:underline;
+	transition:0.5s;
+	}
+.participant_page .contents a:hover{
+	text-decoration:none;
+	opacity:0.7;
+	}
+
+
+.participant_page table{
+	width:100%;
+	border-collapse:collapse;
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+	}
+.participant_page table th,
+.participant_page table td{
+	color:#333;
+	line-height:1.3;
+	text-align:center;
+	vertical-align:middle;
+	word-break:break-word;
+	box-sizing:border-box;
+	padding:5px 5px;
+	border:1px solid #225292;
+	}
+.participant_page table th:first-child{
+	width:55%;
+	text-align:left;
+	padding-left:10px;
+	}
+.participant_page table th{
+	font-size:10pt;
+	background:#dfedff;
+	padding-top:7px;
+	padding-bottom:4px;
+	}
+
+.participant_page table td{
+	font-size:12pt;
+	width:15%;
+	background:#fff;
+	}
+.participant_page table th a,
+.participant_page table td a{
+	color:#225292;
+	text-decoration:underline;
+	transition:0.2s;
+	}
+.participant_page table th a:hover,
+.participant_page table td a:hover{
+	color:#5989c9;
+	text-decoration:none;
+	}
+
+.participant_page ul.list_style_disc li{
+	margin-bottom:0.5em;
+	}
+
+
+.participant_page p.kaisai_date {
+	letter-spacing:0;
+	box-sizing:border-box;
+	padding:1em 0.5em 1em 1.5em;
+	margin-bottom:0.5em;
+	background-color:#dfedff;
+	}
+.participant_page p.kaisai_date span{	
+	display:inline-block;
+	font-size:0.95em;
+	text-align:left;
+	width:12.5em;
+	}
+
+.kaisai_box .nigyoume_indent{
+	text-indent:-1.7em;
+	padding-left:2em;
+	}
+
+.participant_page p.blue_box{
+	font-size:0.95em;
+	text-align:center;
+	box-sizing:border-box;
+	padding:1em;
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+	background-color:#dfedff;
+	}
+
+.participant_page .chushaku_box{
+	margin-top:1em;
+	}
+
+.participant_page .chushaku{
+	text-align:left;
+	margin-top:1em;
+	margin-bottom:1em;
+	}
+
+.participant_page table.hanyou_table th,
+.participant_page table.hanyou_table td{
+	font-size:0.9em;
+	text-align:center;
+	width:auto;
+	}
+
+.participant_page .margin_top_05em{
+	margin-top:1.5em;
+	}
+
+	/*-- 座長・演者へのご案内 moderators_performers.html --*/
+.mp_page p{
+	line-height:1.6;
+	}
+
+.mp_page p a{
+	text-decoration:underline;
+	margin:0 5px;
+	}
+
+.mp_page p a:hover{
+	opacity:0.7;
+	}
+
+.mp_page h4{
+	color:#225292;
+	font-size:1.1em;
+	padding-top:4px;
+	padding-left:0.7em;
+	padding-bottom:5px;
+	margin-top:3em;
+	margin-bottom:1em;
+	border-left:10px solid #225292;
+	border-bottom:1px dotted #225292;
+	}
+
+.mp_page h5{
+	/color:#fff;
+	font-size:1.1em;
+	text-indent:-0.5em;
+	/padding:3px 1em 2px;
+	padding-bottom:1em;
+	margin-top:1em;
+	/margin-bottom:0.5em;
+	/background-color:#dfedff;
+	/background-color:#225292;
+	}
+
+.mp_page table + h5{
+	/margin-top:3em;
+	margin-top:2em;
+	}
+
+.mp_page h6{
+	color:#225292;
+	font-weight:bold;
+	text-align:center;
+	/margin-bottom:1em;
+	padding:3px 1em 2px;
+	/padding-bottom:1em;
+	margin-top:2em;
+	margin-bottom:1em;
+	border-top:1px solid #225292;
+	border-bottom:1px solid #225292;
+	background-color:#dfedff;
+	}
+.mp_page h5 + h6{
+	margin-top:0em;
+	}
+
+
+.mp_page ul li{
+	text-align:justify;
+	margin-bottom:0.5em;
+	}
+
+.mp_page .back_conector li:nth-child(2){
+	padding-right:130px;
+	background-image:url(img/conector_image.jpg);
+	background-repeat:no-repeat;
+	background-position:right top;
+	background-size:100px;
+	}
+
+
+.nigyoume_indent_group{
+	margin-top:5px;
+	}
+.nigyoume_indent_group p{
+	text-indent:-1em;
+	padding-left:1em;
+	margin-bottom:0.5em;
+	}
+.nigyoume_indent_group.gyoukan_clear p{
+	margin-bottom:0em;
+	}
+
+.mp_page .pdf_link_box{
+	text-align:center;
+	}
+
+.mp_page .pdf_link_box a.pdf_link{
+	text-align:center;
+	}
+
+.mp_page .pdf_link_box a:hover{
+	opacity:0.7;
+	}
+
+.mp_page .pdf_link_box a.pdf_link img{
+	display:block;
+	width:200px;
+	margin:0 auto;
+	border:1px solid #ccc;
+	}
+
+.mp_page .pdf_link_box a.pdf_link p{
+	text-align:center;
+	}
+
+.mp_page .pdf_link_box a.pdf_link .pdf_icon{
+	display:inline-block;
+	text-decoration:underline;
+	padding-left:40px;
+	background-image:url(img/icon_pdf.png);
+	background-repeat:no-repeat;
+	background-position:left center;
+	background-size:30px;
+	}
+
+.mp_page table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	}
+.mp_page table th{
+	background:#dfedff;
+	padding-top:7px;
+	padding-bottom:4px;
+	}
+.mp_page table th,
+.mp_page table td{
+	font-size:0.9em;
+	text-align:center;
+	width:auto;
+	vertical-align:middle;
+	word-break:break-word;
+	box-sizing:border-box;
+	padding:5px 5px;
+	border:1px solid #225292;
+	}
+
+.mp_page table.nittei_table th,
+.mp_page table.nittei_table td{
+	line-height:1.2;
+	height:50px;
+	}
+.mp_page table.nittei_table th{
+	font-size:0.8em;
+	}
+.mp_page table.nittei_table td{
+	font-size:1em;
+	width:25%;
+	}
+.mp_page table.nittei_table td span{
+	display:inline-block;
+	font-size:0.8em !important;
+	line-height:1.2;
+	}
+
+.mp_page table.hanyou_table th,
+.mp_page table.hanyou_table td{
+	font-size:1em;
+	text-align:center;
+	width:auto;
+	vertical-align:middle;
+	word-break:break-word;
+	box-sizing:border-box;
+	padding:5px 5px;
+	border:1px solid #225292;
+	}
+
+.mp_page .last_table{
+	margin:1em 0 5em;
+	}
+.mp_page .last_table th{
+	height:60px;
+	}
+
+.mp_page .blue_box{
+	display:inline-block;
+	padding:0.5em 1em;
+	margin-top:10px;
+	margin-bottom:10px;
+	background-color:#dfedff;
+	}
+.mp_page .gray_box{
+	display:inline-block;
+	padding:0.5em 1em;
+	margin-top:10px;
+	margin-bottom:10px;
+	background-color:#eee;
+	}
+
+
+	/*-- 参加登録 registration.html --*/
+
+.registration_page .contents h3{
+	margin-top:3em;
+	}
+.registration_page .contents h2 + h3{
+	margin-top:0;
+	}
+
+
+.registration_page .contents h4{
+	margin-top:1.5em;
+	padding-bottom:0.5em;
+	}
+
+.registration_page p.blue_box{
+	font-size:0.95em;
+	text-align:center;
+	box-sizing:border-box;
+	padding:1em;
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+	background-color:#dfedff;
+	}
+
+.registration_page table.sankahi_table{
+	
+	}
+
+
+.registration_page table{
+	width:100%;
+	border-collapse:collapse;
+	margin-top:0.5em;
+	margin-bottom:1em;
+	}
+.registration_page table th,
+.registration_page table td{
+	color:#333;
+	line-height:1.3;
+	text-align:center;
+	vertical-align:middle;
+	word-break:break-word;
+	box-sizing:border-box;
+	padding:5px 5px;
+	border:1px solid #225292;
+	}
+.registration_page table th:first-child{
+	width:40%;
+	text-align:left;
+	padding-left:10px;
+	}
+.registration_page table th{
+	font-size:10pt;
+	background:#dfedff;
+	padding-top:7px;
+	padding-bottom:4px;
+	}
+
+.registration_page table td{
+	font-size:12pt;
+	width:30%;
+	background:#fff;
+	}
+.registration_page table th a,
+.registration_page table td a{
+	color:#225292;
+	text-decoration:underline;
+	transition:0.2s;
+	}
+.registration_page table th a:hover,
+.registration_page table td a:hover{
+	color:#5989c9;
+	text-decoration:none;
+	}
+
+.registration_page .sankahi_table + p{
+	line-height:1.4;
+	margin-bottom:2em;
+	}
+
+
+.registration_page .contents ul li{
+	line-height:1.4;
+	margin-bottom:0.8em;
+	}
+
+
+.registration_page .button_flex{
+	display:flex;
+	flex-direction: row;
+	 flex-wrap: nowrap;
+	justify-content: center;
+	}
+
+.registration_page .button_flex a{
+	display:inline-block;
+	font-size:1.2em;
+	box-sizing:border-box;
+	min-width:280px;
+	padding:1em 1em 0.8em;
+	margin:2em 0.5em 2em;
+	border-radius:7px;
+	background:linear-gradient(-10deg, #d50854, #ff8405);
+	color:#fff;
+	text-align:center;
+	font-weight:bold;
+	opacity:1;
+	transition:0.5s;
+	}
+
+.registration_page .button_flex a:link,
+.registration_page .button_flex a:active,
+.registration_page .button_flex a:visited{
+	color:#fff;
+	}
+
+.registration_page .button_flex a:hover{
+	opacity:0.7;
+	transition:0.3s;
+	}
+
+.registration_page .button_flex span.mukou{
+	display:inline-block;
+	padding:1em 1em 0.8em;
+	margin:2em 0.5em 2em;
+	border-radius:7px;
+	background:#f37031;
+	color:#fff;
+	text-align:center;
+	font-weight:bold;
+	opacity:1;
+	transition:0.5s;
+	}
+
+
+	/*-- 利益相反の開示について coi.html --*/
+.coi_page p{
+	line-height:1.4;
+	}
+
+.coi_page ul,
+.coi_page ol{
+	margin-bottom:1em;
+	}
+
+.coi_page li{
+	text-align:justify;
+	margin-bottom:0.5em;
+	}
+
+.coi_page ul.chu_indent li{
+	text-indent:-3em;
+	padding-left:3em;
+	}
+
+.coi_page .coi_button_box{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	}
+.coi_page .b_column{
+	flex-direction:column;
+	}
+
+.coi_page .b_row{
+	flex-direction:row;
+	flex-wrap:wrap;
+	}
+
+.coi_page a.coi_button{
+	display:inline-block;
+	padding:1em 1em 0.8em;
+	margin:1em 0.5em 1em;
+	border-radius:7px;
+	background:linear-gradient(-10deg, #d50854, #ff8405);
+	color:#fff;
+	text-align:center;
+	font-weight:bold;
+	opacity:1;
+	transition:0.2s;
+	}
+
+.coi_page a.coi_button:hover{
+	opacity:0.7;
+	}
+
+.coi_page .pdf_icon{
+	display:inline-block;
+	color:unset;
+	font-size:unset;
+	padding-top:7px;
+	padding-bottom:7px;
+	padding-right:5px;
+	padding-left:40px;
+	background-image:url(img/icon_pdf.png);
+	background-repeat:no-repeat;
+	background-position:left center;
+	background-size:30px;
+	}
+
+.coi_page .ppt_icon{
+	display:inline-block;
+	color:unset;
+	font-size:unset;
+	padding-top:7px;
+	padding-bottom:7px;
+	padding-right:5px;
+	padding-left:40px;
+	background-image:url(img/icon_ppt.png);
+	background-repeat:no-repeat;
+	background-position:left center;
+	background-size:30px;
+	}
+
+.coi_page .word_icon{
+	display:inline-block;
+	color:unset;
+	font-size:unset;
+	padding-top:7px;
+	padding-bottom:7px;
+	padding-right:5px;
+	padding-left:40px;
+	background-image:url(img/icon_word.png);
+	background-repeat:no-repeat;
+	background-position:left center;
+	background-size:30px;
+	}
+
+.coi_page .coi_button_box + ul{
+	margin-top:1em;
+	}
+
+
+/*  --------------- sidebar ---------------  */
+	/*   サイドメニュー部分   */
+
+sidebar a.button_web_watch{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	color:#fff;
+	/font-size:1.4em;
+	font-weight:normal;
+	text-decoration:none !important;
+	box-sizing:border-box;
+	min-height:60px;
+	padding:3px;
+	margin:0 auto 10px;
+	background:linear-gradient(-10deg, #d50854, #ff8405);
+	transition:0.2s;
+	}
+sidebar a.button_web_watch:hover{
+	background:linear-gradient(90deg, #fab736, #fab736);
+	}
+
+sidebar a.button_web_watch span{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	color:#fff;
+	font-size:1.2em;
+	width:100%;
+	height:100%;
+	padding:12px 0;
+	margin:0;
+	border:1px solid #fff;
+	}
+
+sidebar p{
+	font-size:0.71em;
+	}
+
+.side_nav{
+	padding-bottom:50px;
+	}
+
+.side_nav li{
+	background-color:#225292;
+	border-bottom:1px solid #fff;
+	}
+
+.side_nav li a,
+.side_nav li a:link,
+.side_nav li a:active,
+.side_nav li a:visited,
+span.a{
+	display:table-cell;
+	color:#fff;
+	font-size:0.9em;
+	width:210px;
+	height:42px;
+	vertical-align:middle;
+	padding-left:1.9em;
+	padding-bottom:2px;
+	background-image:url(img/side_nav_list_img.svg);
+	background-repeat:no-repeat;
+	background-position:0.7em center;
+	background-size:0.8em;
+	transition:0.3s;
+	box-sizing: border-box;
+	background-color:rgba(255,255,255,0);
+	}
+	/* リンクボタン色薄 */
+span.a{background-color:rgba(255,255,255,0.15);}
+
+.side_nav li a:hover{
+	color:#fff;
+	padding-left:2.2em;
+	background-position:1em center;
+	background-color:rgba(255,255,255,0.3);
+	transition:0.3s;
+	}
+
+.side_nav li a span{
+	display:block;
+	font-size:0.7em;
+	}
+
+	/*   サイドバナー部分   */
+
+.banner_link_div{
+	margin-top:50px;
+	}
+
+.banner_link_div ul{
+	padding:10px 0;
+	}
+
+.banner_link_div ul li{
+	margin-bottom:5px;
+	text-align:center;
+	}
+
+.banner_link_div ul li a img{
+	display:block;
+	min-width:180px;
+	min-height:40px;
+	background-color:#ccc;
+	color:#fff;
+	}
+
+
+	/*   事務局情報部分   */
+.jimukyoku_div{
+	margin:15px 0;
+	padding: 0 7px;
+	}
+
+.jimukyoku_div h2{
+	color:#fff;
+	font-size:0.92em;
+	text-align:left;
+	padding:4px 10px 5px;
+	margin-bottom:0.5em;
+	background-color:#39afb6;
+	}
+
+.jimukyoku_div .text_box{
+	padding:0 5px;
+	}
+
+
+
+/*  --------------- footer内 ---------------  */
+
+small.small_copyright{
+	display:block;
+	padding: 0;
+	font-size:1em;
+	text-align:center;
+	color:#fff;
+	}
+
+
+	/* ---- トップに戻るボタン ---- */
+#page_top {
+	position: fixed;
+	bottom: 50px;
+	right: 20px;	
+	}
+
+	/* トップに戻るボタン */
+#page_top {
+	position: fixed;
+	z-index:2;
+	bottom: 50px;
+	right: 10%x;	
+	}
+
+#page_top a {
+	position:relative;
+	z-index:10;
+	display:table-cell;
+	color: #fff;
+	font-size:1.2em;
+	font-weight:bold;
+	
+	text-align: center;
+	vertical-align:middle;
+	text-decoration: none;
+	width:80px;
+	height:80px;
+	border-radius:50%;
+	background-color:rgb(102 194 199 / 21%);
+	opacity:1;
+	transition-duration: 0.5s;
+	}
+
+#page_top a:hover {
+	text-decoration: none;
+	transform:scale(1.2);
+	background-color: rgba(102,194,199,0.8);
+	opacity:1;
+	transition-duration: 0.5s;
+	}
+
+
+
+	/* ---- 準備中 ---- */
+.junbi{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	text-align:center;
+	min-height:300px;
+	}
+
