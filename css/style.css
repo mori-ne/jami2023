@@ -147,8 +147,8 @@ blockquote {
   font-size: 16px;
   font-weight: bold;
   position: relative;
-  margin: 0 0 6px 20px;
-  padding: 8px 0 8px 20px;
+  margin: 0 0 12px 20px;
+  padding: 10px 0 10px 20px;
   border-bottom: 1px solid #999;
 }
 .abst_inner h4::before {
@@ -161,12 +161,19 @@ blockquote {
   border-radius: 1em;
 }
 .abst_inner h6 {
-  margin: 0 0 6px 1em;
+  margin: 0 0 12px 0;
   padding: 0 0 6px 0;
   color: #000;
   font-weight: bold;
   font-size: 16px;
   border-bottom: 1px dotted #666;
+}
+
+div.abst_inner_l2 {
+  margin: 0 0 12px 2em;
+}
+div.abst_inner_l2 div {
+  margin: 0 0 16px 0;
 }
 
 div.abstract_template {
@@ -597,4 +604,8 @@ div.abstract_template .abstract_template_box .btn_red {
 
 .mt_30 {
   margin-top: 30px;
+}
+
+.b {
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
