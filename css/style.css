@@ -132,6 +132,13 @@ blockquote {
 .abst_inner {
   margin: 0 0 22px 0;
 }
+.abst_inner h4.lst_n {
+  list-style-type: none;
+  padding: 10px 0;
+}
+.abst_inner h4.lst_n::before {
+  content: none;
+}
 .abst_inner div {
   margin: 0 0 14px 1em;
 }

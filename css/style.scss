@@ -178,6 +178,15 @@ blockquote {
 .abst_inner {
 	margin: 0 0 22px 0;
 
+	h4.lst_n {
+		list-style-type: none;
+		padding: 10px 0;
+
+		&::before {
+			content: none;
+		}
+	}
+
 	div {
 		margin: 0 0 14px 1em;
 
