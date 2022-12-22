@@ -88,7 +88,6 @@ video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -130,7 +129,7 @@ table {
   border-spacing: 0;
 }
 
---------------------------------- reset ---------------------------------------- * {
+* {
   box-sizing: border-box;
 }
 
@@ -252,118 +251,6 @@ blockquote {
   width: 220px;
   height: 80px;
   margin: 0 0 10px 0;
-}
-
-.ast_indent {
-  display: inline-block;
-  text-indent: -1em;
-  padding-left: 1em;
-}
-
-.abst_inner {
-  margin: 0 0 22px 0;
-}
-.abst_inner h4.lst_n {
-  list-style-type: none;
-  padding: 10px 0;
-}
-.abst_inner h4.lst_n::before {
-  content: none;
-}
-.abst_inner div {
-  margin: 0 0 14px 1em;
-}
-.abst_inner div p {
-  padding: 0 !important;
-}
-.abst_inner div li {
-  font-size: 15px;
-  margin: 0 0 4px 0;
-  margin: 0 0 7px 8px;
-}
-.abst_inner h4 {
-  font-size: 16px;
-  font-weight: bold;
-  position: relative;
-  margin: 0 0 12px 20px;
-  padding: 10px 0 10px 20px;
-  border-bottom: 1px solid #999;
-}
-.abst_inner h4::before {
-  content: "";
-  position: absolute;
-  left: 0px;
-  width: 12px;
-  height: 12px;
-  background: #0050aa;
-  border-radius: 1em;
-}
-.abst_inner h6 {
-  margin: 0 0 12px 0;
-  padding: 0 0 6px 0;
-  color: #000;
-  font-weight: bold;
-  font-size: 16px;
-  border-bottom: 1px dotted #666;
-}
-
-div.abst_inner_l2 {
-  margin: 0 0 12px 2em;
-}
-div.abst_inner_l2 div {
-  margin: 0 0 16px 0;
-}
-.btn_aqua {
-  color: #fff;
-  background: #00c6ff;
-  text-align: center;
-  font-weight: bold;
-  display: block;
-  width: 360px;
-  padding: 14px;
-}
-
-.btn_blue {
-  color: #fff;
-  background: #0050aa;
-  text-align: center;
-  font-weight: bold;
-  display: block;
-  width: 360px;
-  padding: 14px;
-}
-
-.btn_red {
-  color: #fff;
-  background: #ca000c;
-  text-align: center;
-  font-weight: bold;
-  display: block;
-  width: 360px;
-  padding: 14px;
-}
-
-div.abstract_template {
-  margin: 0 0 0 20px;
-}
-div.abstract_template .abstract_template_box {
-  margin: 8px 0 24px 0;
-  padding: 16px;
-  background-color: #eee;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-div.abstract_template .abstract_template_box a {
-  margin: 7px 0;
-}
-
-.h3_rpgh {
-  text-align: right;
-  color: red;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 #contents {
@@ -588,6 +475,118 @@ div.abstract_template .abstract_template_box a {
 }
 #pagetop span:hover {
   cursor: pointer;
+}
+
+.ast_indent {
+  display: inline-block;
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+.abst_inner {
+  margin: 0 0 22px 0;
+}
+.abst_inner h4.lst_n {
+  list-style-type: none;
+  padding: 10px 0;
+}
+.abst_inner h4.lst_n::before {
+  content: none;
+}
+.abst_inner div {
+  margin: 0 0 14px 1em;
+}
+.abst_inner div p {
+  padding: 0 !important;
+}
+.abst_inner div li {
+  font-size: 15px;
+  margin: 0 0 4px 0;
+  margin: 0 0 7px 8px;
+}
+.abst_inner h4 {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  margin: 0 0 12px 20px;
+  padding: 10px 0 10px 20px;
+  border-bottom: 1px solid #999;
+}
+.abst_inner h4::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 12px;
+  height: 12px;
+  background: #0050aa;
+  border-radius: 1em;
+}
+.abst_inner h6 {
+  margin: 0 0 12px 0;
+  padding: 0 0 6px 0;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 1px dotted #666;
+}
+
+div.abst_inner_l2 {
+  margin: 0 0 12px 2em;
+}
+div.abst_inner_l2 div {
+  margin: 0 0 16px 0;
+}
+.btn_aqua {
+  color: #fff;
+  background: #00c6ff;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  width: 360px;
+  padding: 14px;
+}
+
+.btn_blue {
+  color: #fff;
+  background: #0050aa;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  width: 360px;
+  padding: 14px;
+}
+
+.btn_red {
+  color: #fff;
+  background: #ca000c;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  width: 360px;
+  padding: 14px;
+}
+
+div.abstract_template {
+  margin: 0 0 0 20px;
+}
+div.abstract_template .abstract_template_box {
+  margin: 8px 0 24px 0;
+  padding: 16px;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.abstract_template .abstract_template_box a {
+  margin: 7px 0;
+}
+
+.h3_rpgh {
+  text-align: right;
+  color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .copyright {

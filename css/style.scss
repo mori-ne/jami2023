@@ -2,14 +2,10 @@
 
 // ベースカラー変数
 $primary_color: #0050aa;
-// レスポンシブ切り替えサイズの変数
-$sp: "767px";
 
-@mixin sp() {
-  @media (max-width: $sp) {
-    @content;
-  }
-}
+//---------------------------------------------------------------------------------------------
+//----------------------------------------- reset ---------------------------------------------
+//---------------------------------------------------------------------------------------------
 
 html,
 body,
@@ -100,7 +96,6 @@ video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -142,14 +137,17 @@ table {
   border-spacing: 0;
 }
 
----------------------------------
-  reset
-  ----------------------------------------
-  * {
+* {
   box-sizing: border-box;
 }
 
-//共通
+//---------------------------------------------------------------------------------------------
+//----------------------------------------- reset ---------------------------------------------
+//---------------------------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------------------------
+//---------------------------------------- element --------------------------------------------
+//---------------------------------------------------------------------------------------------
 
 body {
   background: #f1f6f9;
@@ -172,7 +170,13 @@ blockquote {
   margin: 0 0 30px 0;
 }
 
-//レイアウト
+//---------------------------------------------------------------------------------------------
+//---------------------------------------- element --------------------------------------------
+//---------------------------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------------------------
+//------------------------------------------ id -----------------------------------------------
+//---------------------------------------------------------------------------------------------
 
 #wrapper {
   width: 1000px;
@@ -300,133 +304,6 @@ blockquote {
       margin: 0 0 10px 0;
     }
   }
-}
-
-.ast_indent {
-  display: inline-block;
-  text-indent: -1em;
-  padding-left: 1em;
-}
-
-.abst_inner {
-  margin: 0 0 22px 0;
-
-  h4.lst_n {
-    list-style-type: none;
-    padding: 10px 0;
-
-    &::before {
-      content: none;
-    }
-  }
-
-  div {
-    margin: 0 0 14px 1em;
-
-    p {
-      padding: 0 !important;
-    }
-
-    li {
-      font-size: 15px;
-      margin: 0 0 4px 0;
-      margin: 0 0 7px 8px;
-    }
-  }
-
-  h4 {
-    font-size: 16px;
-    font-weight: bold;
-    position: relative;
-    margin: 0 0 12px 20px;
-    padding: 10px 0 10px 20px;
-    border-bottom: 1px solid #999;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0px;
-      width: 12px;
-      height: 12px;
-      background: $primary_color;
-      border-radius: 1em;
-    }
-  }
-
-  h6 {
-    margin: 0 0 12px 0;
-    padding: 0 0 6px 0;
-    color: #000;
-    font-weight: bold;
-    font-size: 16px;
-    border-bottom: 1px dotted #666;
-  }
-}
-
-div.abst_inner_l2 {
-  margin: 0 0 12px 2em;
-
-  div {
-    margin: 0 0 16px 0;
-
-    li {
-    }
-  }
-}
-
-.btn_aqua {
-  color: #fff;
-  background: #00c6ff;
-  text-align: center;
-  font-weight: bold;
-  display: block;
-  width: 360px;
-  padding: 14px;
-}
-
-.btn_blue {
-  color: #fff;
-  background: #0050aa;
-  text-align: center;
-  font-weight: bold;
-  display: block;
-  width: 360px;
-  padding: 14px;
-}
-
-.btn_red {
-  color: #fff;
-  background: #ca000c;
-  text-align: center;
-  font-weight: bold;
-  display: block;
-  width: 360px;
-  padding: 14px;
-}
-
-div.abstract_template {
-  margin: 0 0 0 20px;
-
-  .abstract_template_box {
-    margin: 8px 0 24px 0;
-    padding: 16px;
-    background-color: #eee;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    a {
-      margin: 7px 0;
-    }
-  }
-}
-
-.h3_rpgh {
-  text-align: right;
-  color: red;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 #contents {
@@ -707,6 +584,141 @@ div.abstract_template {
   }
 }
 
+//---------------------------------------------------------------------------------------------
+//------------------------------------------ id -----------------------------------------------
+//---------------------------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------------------------
+//----------------------------------------- class ---------------------------------------------
+//---------------------------------------------------------------------------------------------
+
+.ast_indent {
+  display: inline-block;
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+.abst_inner {
+  margin: 0 0 22px 0;
+
+  h4.lst_n {
+    list-style-type: none;
+    padding: 10px 0;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  div {
+    margin: 0 0 14px 1em;
+
+    p {
+      padding: 0 !important;
+    }
+
+    li {
+      font-size: 15px;
+      margin: 0 0 4px 0;
+      margin: 0 0 7px 8px;
+    }
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    margin: 0 0 12px 20px;
+    padding: 10px 0 10px 20px;
+    border-bottom: 1px solid #999;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      width: 12px;
+      height: 12px;
+      background: $primary_color;
+      border-radius: 1em;
+    }
+  }
+
+  h6 {
+    margin: 0 0 12px 0;
+    padding: 0 0 6px 0;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: 1px dotted #666;
+  }
+}
+
+div.abst_inner_l2 {
+  margin: 0 0 12px 2em;
+
+  div {
+    margin: 0 0 16px 0;
+
+    li {
+    }
+  }
+}
+
+.btn_aqua {
+  color: #fff;
+  background: #00c6ff;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  width: 360px;
+  padding: 14px;
+}
+
+.btn_blue {
+  color: #fff;
+  background: #0050aa;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  width: 360px;
+  padding: 14px;
+}
+
+.btn_red {
+  color: #fff;
+  background: #ca000c;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  width: 360px;
+  padding: 14px;
+}
+
+div.abstract_template {
+  margin: 0 0 0 20px;
+
+  .abstract_template_box {
+    margin: 8px 0 24px 0;
+    padding: 16px;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      margin: 7px 0;
+    }
+  }
+}
+
+.h3_rpgh {
+  text-align: right;
+  color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .copyright {
   font-size: 13px;
   height: 50px;
@@ -719,7 +731,6 @@ div.abstract_template {
   padding: 0 30px;
 }
 
-// ご挨拶
 .greeting_profile {
   display: flex;
   flex-direction: row;
@@ -821,9 +832,6 @@ div.abstract_template {
   color: red !important;
   margin-left: 1em;
   text-indent: -1em;
-}
-
-section {
 }
 
 .link_red {
@@ -934,3 +942,7 @@ section {
   flex-direction: column;
   align-items: center;
 }
+
+//---------------------------------------------------------------------------------------------
+//----------------------------------------- class ---------------------------------------------
+//---------------------------------------------------------------------------------------------
